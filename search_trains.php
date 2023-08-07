@@ -64,3 +64,47 @@ if(isset($_POST['Station_From']) && isset($_POST['Station_To'])){
                             </p>
                             <p> Class: <?php echo $_SESSION['class'];}?>
                             </p>
+                            
+                            <?php
+						$sql8=("SELECT * FROM class WHERE Class_Name= '$_SESSION[class]'");
+						$res8= mysqli_query($conn,$sql8);
+						$row8= mysqli_fetch_assoc($res8);?>
+							<p> Price: <?php echo $row8['Price']; $_SESSION['Price']=$row8['Price']?></p>
+
+				
+					
+					<form action="ticket_booking.php" method="post" id="ticketBooking">
+						<div class="ticket-form-control-single">
+							<label for="class"><span style="color:#000000">Number of ticket</span></label>
+							<select type= int name="number_of_ticket" id="number_of_ticket" class="form-control">
+													<option value="">Number of ticket</option>
+																														<option value="1">1</option>
+																														<option value="2">2</option>
+																														<option value="3">3</option>                                                                          
+																														<option value="4">4</option>
+							</select>
+						</div>
+
+						<p><div class="ticket-page-form">
+							<div class="tikect-form-control-single">
+								<button class="ticket-form-submit-btn" type="submit">Click here to book your ticket</button>
+							</div>
+						</div></P>
+					</form>
+						
+					</div>
+					</div>
+					</div>
+				</div>
+			</body>  
+		</html>
+		
+<?php		
+		
+	}
+	else{
+		echo "Sorry, no trains available on this route.";
+		
+	}
+}
+?>
