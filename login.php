@@ -49,5 +49,15 @@
 		</div>
 	</form>
 
+	<!-- Added buttons -->
+	<div>
+		<button onclick="window.location.href='resetpassword.php'">Reset Password</button>
+	</div>
+	<div>
+		<button onclick="window.location.href='Complaint.php'">Complaint</button>
+		<button onclick="window.location.href='support.php'">Support</button>
+		<button onclick="window.location.href='Helpdesk and FAQs.php'">FAQ</button>
+	</div>
+
 </body>
 </html>
