@@ -23,7 +23,7 @@ if (($row1['available_seats']-$_SESSION['num_of_ticket'])>=0){
     }
 
     //ticket_number_create
-    $sql1 = "INSERT INTO ticket VALUES('$_SESSION[train_id]-$_SESSION[journey_date]-$_SESSION[nid]','$_SESSION[journey_date]','$_SESSION[class]',$_SESSION[Price]*$_SESSION[num_of_ticket],$_SESSION[nid],'$_SESSION[train_id]')";
+    $sql1 = "INSERT INTO ticket VALUES('$_SESSION[Train_id]-$_SESSION[Journey_date]-$_SESSION[NID]','$_SESSION[Journey_date]','$_SESSION[Seat_class]',$_SESSION[Price]*$_SESSION[num_of_ticket],$_SESSION[nid],'$_SESSION[train_id]')";
     $result = mysqli_query($conn, $sql1);
     if (mysqli_affected_rows($conn)) {
     }

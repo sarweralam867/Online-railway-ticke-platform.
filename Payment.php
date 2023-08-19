@@ -18,7 +18,7 @@
             <h1>Select Payment Method</h1>
         </div>
         <div class="bkash">
-            <a href="Bkash.php">
+            <a href="bkash_html.php">
                 <img src="bkashpayment.png" height="70" width="150" alt=>
             </a>
             
